@@ -21,12 +21,16 @@ body {
 
 .page {
     min-height: 100vh;
-    padding: 70px 28px;
-    display: flex;
+    padding: 70px 28px 45px;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.page.active {
+    display: flex;
 }
 
 .opening {
@@ -36,170 +40,140 @@ body {
 .small {
     font-family: Arial, sans-serif;
     font-size: 13px;
-    letter-spacing: 2px;
-    color: #81796e;
-    margin-bottom: 25px;
+    letter-spacing: 3px;
+    color: #9a8f82;
+    margin-bottom: 30px;
 }
 
 h1 {
-    font-size: 48px;
+    font-size: clamp(48px, 11vw, 82px);
     font-weight: normal;
-    margin: 0 0 18px;
+    margin: 0 0 28px;
 }
 
 h2 {
-    font-size: 32px;
+    font-size: clamp(34px, 8vw, 55px);
     font-weight: normal;
-    margin: 0 0 20px;
+    margin: 0 0 32px;
 }
 
 p {
-    font-size: 18px;
+    font-size: 21px;
     line-height: 1.7;
-    max-width: 650px;
+    max-width: 720px;
+    margin: 20px auto;
+}
+
+.subtitle {
+    font-size: 23px;
+    margin-bottom: 45px;
 }
 
 button {
-    margin-top: 28px;
-    padding: 13px 24px;
-    border: 1px solid #29251f;
     background: transparent;
+    border: 1px solid #29251f;
     border-radius: 30px;
+    padding: 13px 28px;
     font-family: Arial, sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     cursor: pointer;
+    color: #29251f;
 }
 
 button:hover {
     background: #29251f;
-    color: white;
+    color: #f7f3ed;
 }
 
-.section {
-    display: none;
-    min-height: 100vh;
+.card {
+    width: min(950px, 100%);
+    background: #fbf9f5;
+    border: 1px solid #ddd5ca;
+    padding: 55px 35px;
 }
 
 .number {
     font-family: Arial, sans-serif;
-    font-size: 12px;
-    letter-spacing: 3px;
+    font-size: 13px;
+    letter-spacing: 4px;
     color: #9a8f82;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
 }
 
-.card {
-    background: #fffdf9;
-    padding: 42px;
-    max-width: 760px;
-    width: 100%;
-    border: 1px solid #ded7cd;
-    box-shadow: 0 10px 30px rgba(50,40,30,0.06);
-}
-
-.nav {
-    margin-top: 35px;
-}
-
-.nav button {
-    margin: 5px;
-}
-
-.memory {
-    margin: 22px 0;
-    padding: 18px;
-    border-left: 2px solid #b8aa98;
-    text-align: left;
-    font-size: 17px;
-    line-height: 1.6;
-}
-
-/* IMAGES */
-
-.memory-image {
-    width: 100%;
-    max-width: 620px;
+.chat-image {
+    width: min(700px, 100%);
     display: block;
-    margin: 25px auto;
-    border: 1px solid #ded7cd;
+    margin: 30px auto;
+    border: 1px solid #ddd5ca;
 }
 
 .lobster-image {
-    width: 100%;
-    max-width: 420px;
+    width: min(560px, 100%);
+    max-height: 600px;
+    object-fit: contain;
     display: block;
-    margin: 30px auto;
+    margin: 35px auto;
 }
 
 .pfp-image {
-    width: 330px;
-    height: 330px;
-    object-fit: cover;
+    width: min(500px, 90vw);
+    max-height: 620px;
+    object-fit: contain;
     border-radius: 50%;
     display: block;
-    margin: 15px auto 30px;
+    margin: 20px auto 35px;
 }
 
-.photo-image {
-    width: 100%;
-    max-width: 560px;
+.second-image {
+    width: min(600px, 100%);
+    max-height: 700px;
+    object-fit: contain;
     display: block;
-    margin: 15px auto 30px;
+    margin: 30px auto 40px;
 }
 
-/* PAGE 3 */
-
-.lobster-text {
-    max-width: 610px;
-    margin: auto;
-}
-
-.lobster-text p {
-    margin: 22px auto;
-}
-
-/* PAGE 4 */
-
-.pfp-text {
-    font-size: 19px;
+.caption {
+    font-size: 21px;
     line-height: 1.8;
 }
 
-/* PAGE 5 */
-
 .big-line {
-    font-size: 23px;
-    line-height: 1.7;
+    font-size: 27px;
+    line-height: 1.6;
+    max-width: 650px;
 }
-
-/* PAGE 6 */
 
 .call-date {
     font-family: Arial, sans-serif;
     font-size: 13px;
     letter-spacing: 3px;
     color: #9a8f82;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .call-text {
-    max-width: 600px;
+    max-width: 650px;
 }
 
-/* FINAL */
+.call-text p {
+    font-size: 23px;
+}
+
+.nav {
+    display: flex;
+    gap: 18px;
+    margin-top: 45px;
+    justify-content: center;
+}
 
 .final {
     background: #29251f;
     color: #f7f3ed;
 }
 
-.final .small {
-    color: #bdb4a8;
-}
-
 .final button {
-    border-color: #f7f3ed;
     color: #f7f3ed;
+    border-color: #f7f3ed;
 }
 
 .final button:hover {
@@ -207,52 +181,71 @@ button:hover {
     color: #29251f;
 }
 
-/* POPUP */
+.final-title {
+    font-size: clamp(48px, 10vw, 76px);
+    font-weight: normal;
+    margin-bottom: 30px;
+}
 
 .popup {
-    display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.55);
-    align-items: center;
+    background: rgba(20,18,15,0.72);
+    display: none;
     justify-content: center;
+    align-items: center;
     padding: 25px;
+    z-index: 100;
+}
+
+.popup.show {
+    display: flex;
 }
 
 .popup-box {
-    background: #fffdf9;
+    width: min(480px, 100%);
+    background: #f7f3ed;
     color: #29251f;
-    padding: 45px 30px;
-    max-width: 420px;
-    width: 100%;
+    padding: 55px 30px;
     text-align: center;
+    border-radius: 4px;
 }
 
-.popup-box h2 {
-    margin-bottom: 10px;
+.popup-box h3 {
+    font-family: Georgia, serif;
+    font-size: 34px;
+    font-weight: normal;
+    margin: 0 0 35px;
 }
 
-.popup-box p {
-    margin: 0 auto;
+.popup-box button {
+    border-color: #29251f;
 }
 
 @media (max-width: 600px) {
 
-    h1 {
-        font-size: 40px;
-    }
-
-    h2 {
-        font-size: 28px;
+    .page {
+        padding: 55px 20px 35px;
     }
 
     .card {
-        padding: 28px 22px;
+        padding: 40px 20px;
     }
 
-    .pfp-image {
-        width: 260px;
-        height: 260px;
+    p {
+        font-size: 18px;
+    }
+
+    .caption {
+        font-size: 18px;
+    }
+
+    .big-line {
+        font-size: 22px;
+    }
+
+    .call-text p {
+        font-size: 20px;
     }
 
 }
@@ -260,55 +253,65 @@ button:hover {
 </style>
 </head>
 
-
 <body>
 
+<!-- PAGE 1 -->
 
-<!-- ========================= -->
-<!-- PAGE 1 — OPENING -->
-<!-- ========================= -->
-
-<section class="page opening" id="opening">
+<section class="page opening active" id="page1">
 
     <div class="small">02.09.2026</div>
 
     <h1>hi pratham :)</h1>
 
-    <p>one month.</p>
+    <div class="subtitle">
+        one month.
+    </div>
 
-    <button onclick="openBook()">open →</button>
+    <button onclick="showPage(2)">
+        open →
+    </button>
 
 </section>
 
 
-<!-- ========================= -->
-<!-- PAGE 2 — HINGE -->
-<!-- ========================= -->
+<!-- PAGE 2 -->
 
-<section class="page section" id="section1">
+<section class="page" id="page2">
 
-    <div class="number">02 — ONE MONTH OF YOU</div>
+    <div class="number">
+        02 — ONE MONTH OF YOU
+    </div>
 
     <div class="card">
 
         <h2>and it all started here.</h2>
 
-        <img
-            src="IMG_6993.jpeg"
-            class="memory-image"
-            alt="Our first Hinge conversation"
-        >
+        <p>
+            2 August 2026.
+        </p>
 
         <p>
-            from day 1 you've known exactly what to say,
-            and i love that about you.
+            the day we started talking.
+        </p>
+
+        <p>
+            and somehow, one conversation turned into
+            one month of you.
+        </p>
+
+        <p>
+            honestly, i'm very glad it did :)
         </p>
 
     </div>
 
     <div class="nav">
 
-        <button onclick="showSection(2)">
+        <button onclick="showPage(1)">
+            ← back
+        </button>
+
+        <button onclick="showPage(3)">
             next →
         </button>
 
@@ -317,42 +320,38 @@ button:hover {
 </section>
 
 
-<!-- ========================= -->
-<!-- PAGE 3 — LOBSTER -->
-<!-- ========================= -->
+<!-- PAGE 3 -->
 
-<section class="page section" id="section2">
+<section class="page" id="page3">
 
-    <div class="number">03 — ONE MONTH OF YOU</div>
+    <div class="number">
+        03 — ONE MONTH OF YOU
+    </div>
 
     <div class="card">
 
         <h2>my favourite person.</h2>
 
-        <div class="lobster-text">
+        <p>
+            i did <b>NOT</b> expect to meet someone as amazing
+            as you here, but i'm veryyyy glad i did :)
+        </p>
 
-            <p>
-                i did <b>NOT</b> expect to meet someone as amazing
-                as you here, but i'm veryyyy glad i did :)
-            </p>
+        <p>
+            somehow, in just one month, you've become
+            my favourite person in the whole entire world.
+        </p>
 
-            <p>
-                somehow, in just one month, you've become
-                my favourite person in the whole entire world.
-            </p>
+        <p>
+            and you know how Phoebe said,
+            “he's her lobster”?
+        </p>
 
-            <p>
-                and you know how Phoebe said,
-                “he's her lobster”?
-            </p>
-
-            <p>
-                yeah.
-                <br>
-                i think i've found mine.
-            </p>
-
-        </div>
+        <p>
+            yeah.
+            <br>
+            i think i've found mine.
+        </p>
 
         <img
             src="IMG_2332.jpeg"
@@ -364,11 +363,11 @@ button:hover {
 
     <div class="nav">
 
-        <button onclick="showSection(1)">
+        <button onclick="showPage(2)">
             ← back
         </button>
 
-        <button onclick="showSection(3)">
+        <button onclick="showPage(4)">
             next →
         </button>
 
@@ -377,41 +376,44 @@ button:hover {
 </section>
 
 
-<!-- ========================= -->
-<!-- PAGE 4 — PROFILE PICTURE -->
-<!-- ========================= -->
+<!-- PAGE 4 -->
 
-<section class="page section" id="section3">
+<section class="page" id="page4">
 
-    <div class="number">04 — THE FIRST IMPRESSION</div>
+    <div class="number">
+        04 — ONE MONTH OF YOU
+    </div>
 
     <div class="card">
-
-        <img
-            src="pratham-pfp.jpeg"
-            class="pfp-image"
-            alt="Pratham's profile picture"
-        >
 
         <h2>and then you changed your pfp.</h2>
 
-        <p class="pfp-text">
-            i literally stared at this for 15 straight minutes.
-            <br>
-            <i>(you're that pretty)</i>
+        <img
+            src="IMG_2333.jpeg"
+            class="pfp-image"
+            alt="your pfp"
+        >
+
+        <div class="caption">
+
+            i literally stared at this for 15 straight minutes
+            (you're that pretty)
+
             <br><br>
-            and about 10,000 more times.
-        </p>
+
+            (and about 10,000 more times)
+
+        </div>
 
     </div>
 
     <div class="nav">
 
-        <button onclick="showSection(2)">
+        <button onclick="showPage(3)">
             ← back
         </button>
 
-        <button onclick="showSection(4)">
+        <button onclick="showPage(5)">
             next →
         </button>
 
@@ -420,41 +422,41 @@ button:hover {
 </section>
 
 
-<!-- ========================= -->
-<!-- PAGE 5 — 10,000 -->
-<!-- ========================= -->
+<!-- PAGE 5 -->
 
-<section class="page section" id="section4">
+<section class="page" id="page5">
 
-    <div class="number">05 — APPARENTLY, 10,000 WASN'T ENOUGH</div>
+    <div class="number">
+        05 — ONE MONTH OF YOU
+    </div>
 
     <div class="card">
 
+        <h2>and then i got this pic.</h2>
+
         <img
-            src="pratham-photo.jpeg"
-            class="photo-image"
-            alt="Pratham"
+            src="IMG_6993.jpeg"
+            class="second-image"
+            alt="you"
         >
 
-        <p class="big-line">
-            and then i got this pic.
-        </p>
+        <div class="big-line">
 
-        <p class="big-line">
-            yup.
+            and yup,
             <br>
             10,000 doesn't even come close.
-        </p>
+
+        </div>
 
     </div>
 
     <div class="nav">
 
-        <button onclick="showSection(3)">
+        <button onclick="showPage(4)">
             ← back
         </button>
 
-        <button onclick="showSection(5)">
+        <button onclick="showPage(6)">
             next →
         </button>
 
@@ -463,30 +465,31 @@ button:hover {
 </section>
 
 
-<!-- ========================= -->
-<!-- PAGE 6 — FIRST CALL -->
-<!-- ========================= -->
+<!-- PAGE 6 -->
 
-<section class="page section" id="section5">
+<section class="page" id="page6">
 
-    <div class="number">06 — THE FIRST CALL</div>
+    <div class="number">
+        06 — ONE MONTH OF YOU
+    </div>
 
     <div class="card">
 
         <div class="call-date">
-            28.08.2026
+            28/08/2026
         </div>
 
-        <h2>the first time i heard you.</h2>
+        <h2>our first call.</h2>
 
         <div class="call-text">
 
             <p>
-                we spoke for the first time on call.
+                we spoke for the first time on call
             </p>
 
             <p>
                 and holy shit,
+                <br>
                 i knew i was doomed.
             </p>
 
@@ -500,11 +503,11 @@ button:hover {
 
     <div class="nav">
 
-        <button onclick="showSection(4)">
+        <button onclick="showPage(5)">
             ← back
         </button>
 
-        <button onclick="showSection(6)">
+        <button onclick="showPage(7)">
             next →
         </button>
 
@@ -513,22 +516,20 @@ button:hover {
 </section>
 
 
-<!-- ========================= -->
-<!-- PAGE 7 — HINGE GOODBYE -->
-<!-- ========================= -->
+<!-- PAGE 7 -->
 
-<section class="page section final" id="section6">
+<section class="page final" id="page7">
 
-    <div class="small">
-        07 — THE HINGE GOODBYE
+    <div class="number">
+        07 — ONE MONTH LATER
     </div>
 
-    <h1>
-        one month later…
-    </h1>
+    <div class="final-title">
+        one month later...
+    </div>
 
     <p>
-        i think we found what we were looking for.
+        I think we've found what we were looking for.
     </p>
 
     <button onclick="showPopup()">
@@ -537,7 +538,7 @@ button:hover {
 
     <div class="nav">
 
-        <button onclick="showSection(5)">
+        <button onclick="showPage(6)">
             ← back
         </button>
 
@@ -546,17 +547,15 @@ button:hover {
 </section>
 
 
-<!-- ========================= -->
 <!-- POPUP -->
-<!-- ========================= -->
 
 <div class="popup" id="popup">
 
     <div class="popup-box">
 
-        <h2>
+        <h3>
             hehe you're mine now
-        </h2>
+        </h3>
 
         <button onclick="closePopup()">
             okay :)
@@ -569,29 +568,17 @@ button:hover {
 
 <script>
 
-function openBook() {
+function showPage(number) {
 
-    document.getElementById("opening").style.display = "none";
+    const pages = document.querySelectorAll(".page");
 
-    document.getElementById("section1").style.display = "flex";
-
-    window.scrollTo(0, 0);
-}
-
-
-function showSection(number) {
-
-    document.getElementById("opening").style.display = "none";
-
-    let sections = document.querySelectorAll(".section");
-
-    sections.forEach(function(section) {
-
-        section.style.display = "none";
-
+    pages.forEach(function(page) {
+        page.classList.remove("active");
     });
 
-    sections[number - 1].style.display = "flex";
+    document
+        .getElementById("page" + number)
+        .classList.add("active");
 
     window.scrollTo(0, 0);
 }
@@ -599,14 +586,18 @@ function showSection(number) {
 
 function showPopup() {
 
-    document.getElementById("popup").style.display = "flex";
+    document
+        .getElementById("popup")
+        .classList.add("show");
 
 }
 
 
 function closePopup() {
 
-    document.getElementById("popup").style.display = "none";
+    document
+        .getElementById("popup")
+        .classList.remove("show");
 
 }
 
