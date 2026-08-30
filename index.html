@@ -7,162 +7,266 @@
 <title>one month ♡</title>
 
 <style>
-    * {
-        box-sizing: border-box;
-    }
 
-    body {
-        margin: 0;
-        background: #f7f3ed;
-        color: #29251f;
-        font-family: Georgia, serif;
-    }
+* {
+    box-sizing: border-box;
+}
 
-    .page {
-        min-height: 100vh;
-        padding: 70px 28px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
+body {
+    margin: 0;
+    background: #f7f3ed;
+    color: #29251f;
+    font-family: Georgia, serif;
+}
 
-    .opening {
-        min-height: 100vh;
-    }
+.page {
+    min-height: 100vh;
+    padding: 70px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
-    .small {
-        font-family: Arial, sans-serif;
-        font-size: 13px;
-        letter-spacing: 2px;
-        color: #81796e;
-        margin-bottom: 25px;
-    }
+.opening {
+    min-height: 100vh;
+}
+
+.small {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #81796e;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: normal;
+    margin: 0 0 18px;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: normal;
+    margin: 0 0 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 650px;
+}
+
+button {
+    margin-top: 28px;
+    padding: 13px 24px;
+    border: 1px solid #29251f;
+    background: transparent;
+    border-radius: 30px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #29251f;
+    color: white;
+}
+
+.section {
+    display: none;
+    min-height: 100vh;
+}
+
+.number {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #9a8f82;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: #fffdf9;
+    padding: 42px;
+    max-width: 760px;
+    width: 100%;
+    border: 1px solid #ded7cd;
+    box-shadow: 0 10px 30px rgba(50,40,30,0.06);
+}
+
+.nav {
+    margin-top: 35px;
+}
+
+.nav button {
+    margin: 5px;
+}
+
+.memory {
+    margin: 22px 0;
+    padding: 18px;
+    border-left: 2px solid #b8aa98;
+    text-align: left;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* IMAGES */
+
+.memory-image {
+    width: 100%;
+    max-width: 620px;
+    display: block;
+    margin: 25px auto;
+    border: 1px solid #ded7cd;
+}
+
+.lobster-image {
+    width: 100%;
+    max-width: 420px;
+    display: block;
+    margin: 30px auto;
+}
+
+.pfp-image {
+    width: 330px;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 15px auto 30px;
+}
+
+.photo-image {
+    width: 100%;
+    max-width: 560px;
+    display: block;
+    margin: 15px auto 30px;
+}
+
+/* PAGE 3 */
+
+.lobster-text {
+    max-width: 610px;
+    margin: auto;
+}
+
+.lobster-text p {
+    margin: 22px auto;
+}
+
+/* PAGE 4 */
+
+.pfp-text {
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+/* PAGE 5 */
+
+.big-line {
+    font-size: 23px;
+    line-height: 1.7;
+}
+
+/* PAGE 6 */
+
+.call-date {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #9a8f82;
+    margin-bottom: 30px;
+}
+
+.call-text {
+    max-width: 600px;
+}
+
+/* FINAL */
+
+.final {
+    background: #29251f;
+    color: #f7f3ed;
+}
+
+.final .small {
+    color: #bdb4a8;
+}
+
+.final button {
+    border-color: #f7f3ed;
+    color: #f7f3ed;
+}
+
+.final button:hover {
+    background: #f7f3ed;
+    color: #29251f;
+}
+
+/* POPUP */
+
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.popup-box {
+    background: #fffdf9;
+    color: #29251f;
+    padding: 45px 30px;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+}
+
+.popup-box h2 {
+    margin-bottom: 10px;
+}
+
+.popup-box p {
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
 
     h1 {
-        font-size: 48px;
-        font-weight: normal;
-        margin: 0 0 18px;
+        font-size: 40px;
     }
 
     h2 {
-        font-size: 32px;
-        font-weight: normal;
-        margin-bottom: 18px;
-    }
-
-    p {
-        font-size: 18px;
-        line-height: 1.7;
-        max-width: 650px;
-    }
-
-    button {
-        margin-top: 28px;
-        padding: 13px 24px;
-        border: 1px solid #29251f;
-        background: transparent;
-        border-radius: 30px;
-        font-family: Arial, sans-serif;
-        font-size: 15px;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background: #29251f;
-        color: white;
-    }
-
-    .section {
-        display: none;
-        min-height: 100vh;
-    }
-
-    .number {
-        font-family: Arial, sans-serif;
-        font-size: 12px;
-        letter-spacing: 3px;
-        color: #9a8f82;
-        margin-bottom: 20px;
+        font-size: 28px;
     }
 
     .card {
-        background: #fffdf9;
-        padding: 35px;
-        max-width: 650px;
-        width: 100%;
-        border: 1px solid #ded7cd;
-        box-shadow: 0 10px 30px rgba(50,40,30,0.06);
+        padding: 28px 22px;
     }
 
-    .memory {
-        margin: 18px 0;
-        padding: 18px;
-        border-left: 2px solid #b8aa98;
-        text-align: left;
-        font-size: 17px;
-        line-height: 1.6;
+    .pfp-image {
+        width: 260px;
+        height: 260px;
     }
 
-    .playlist {
-        text-align: left;
-        line-height: 2;
-        font-family: Arial, sans-serif;
-        font-size: 15px;
-    }
+}
 
-    .nav {
-        margin-top: 35px;
-    }
-
-    .nav button {
-        margin: 5px;
-    }
-
-    .final {
-        background: #29251f;
-        color: #f7f3ed;
-    }
-
-    .final .small {
-        color: #bdb4a8;
-    }
-
-    .final button {
-        border-color: #f7f3ed;
-        color: #f7f3ed;
-    }
-
-    .final button:hover {
-        background: #f7f3ed;
-        color: #29251f;
-    }
-
-    .popup {
-        display: none;
-        position: fixed;
-        inset: 0;
-        background: rgba(0,0,0,0.55);
-        align-items: center;
-        justify-content: center;
-        padding: 25px;
-    }
-
-    .popup-box {
-        background: #fffdf9;
-        color: #29251f;
-        padding: 40px 30px;
-        max-width: 420px;
-        width: 100%;
-        text-align: center;
-    }
 </style>
 </head>
 
+
 <body>
 
-<!-- OPENING -->
+
+<!-- ========================= -->
+<!-- PAGE 1 — OPENING -->
+<!-- ========================= -->
 
 <section class="page opening" id="opening">
 
@@ -177,239 +281,286 @@
 </section>
 
 
-<!-- 01 -->
+<!-- ========================= -->
+<!-- PAGE 2 — HINGE -->
+<!-- ========================= -->
 
 <section class="page section" id="section1">
-
-    <div class="number">01 — HOW IT STARTED</div>
-
-    <div class="card">
-
-        <h2>so... the Hinge story.</h2>
-
-        <p>
-            Two people. One dating app. 
-            Questionable decisions.
-            And somehow, here we are.
-        </p>
-
-        <div class="memory">
-            it was supposed to be just another conversation.
-        </div>
-
-        <div class="memory">
-            and then it very much wasn't.
-        </div>
-
-        <div class="memory">
-            somewhere along the way, talking to you became
-            one of my favourite parts of the day.
-        </div>
-
-    </div>
-
-    <div class="nav">
-        <button onclick="showSection(2)">next →</button>
-    </div>
-
-</section>
-
-
-<!-- 02 -->
-
-<section class="page section" id="section2">
 
     <div class="number">02 — ONE MONTH OF YOU</div>
 
     <div class="card">
 
-        <h2>little things.</h2>
+        <h2>and it all started here.</h2>
+
+        <img
+            src="IMG_6993.jpeg"
+            class="memory-image"
+            alt="Our first Hinge conversation"
+        >
 
         <p>
-            The tiny things I noticed without really meaning to.
+            from day 1 you've known exactly what to say,
+            and i love that about you.
         </p>
-
-        <div class="memory">
-            the way you...
-        </div>
-
-        <div class="memory">
-            the random things you say that somehow stay in my head.
-        </div>
-
-        <div class="memory">
-            the conversations that accidentally become hours.
-        </div>
-
-        <div class="memory">
-            basically: you have become very easy to notice.
-        </div>
 
     </div>
 
     <div class="nav">
-        <button onclick="showSection(1)">← back</button>
-        <button onclick="showSection(3)">next →</button>
+
+        <button onclick="showSection(2)">
+            next →
+        </button>
+
     </div>
 
 </section>
 
 
-<!-- 03 -->
+<!-- ========================= -->
+<!-- PAGE 3 — LOBSTER -->
+<!-- ========================= -->
+
+<section class="page section" id="section2">
+
+    <div class="number">03 — ONE MONTH OF YOU</div>
+
+    <div class="card">
+
+        <h2>my favourite person.</h2>
+
+        <div class="lobster-text">
+
+            <p>
+                i did <b>NOT</b> expect to meet someone as amazing
+                as you here, but i'm veryyyy glad i did :)
+            </p>
+
+            <p>
+                somehow, in just one month, you've become
+                my favourite person in the whole entire world.
+            </p>
+
+            <p>
+                and you know how Phoebe said,
+                “he's her lobster”?
+            </p>
+
+            <p>
+                yeah.
+                <br>
+                i think i've found mine.
+            </p>
+
+        </div>
+
+        <img
+            src="lobster.jpeg"
+            class="lobster-image"
+            alt="He's her lobster"
+        >
+
+    </div>
+
+    <div class="nav">
+
+        <button onclick="showSection(1)">
+            ← back
+        </button>
+
+        <button onclick="showSection(3)">
+            next →
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- PAGE 4 — PROFILE PICTURE -->
+<!-- ========================= -->
 
 <section class="page section" id="section3">
 
-    <div class="number">03 — THE SOUNDTRACK 🎧</div>
+    <div class="number">04 — THE FIRST IMPRESSION</div>
 
     <div class="card">
 
-        <h2>15 songs.</h2>
+        <img
+            src="pratham-pfp.jpeg"
+            class="pfp-image"
+            alt="Pratham's profile picture"
+        >
 
-        <p>
-            A tiny soundtrack for the first month.
-        </p>
+        <h2>and then you changed your pfp.</h2>
 
-        <div class="playlist">
-            01. song one<br>
-            02. song two<br>
-            03. song three<br>
-            04. song four<br>
-            05. song five<br>
-            06. song six<br>
-            07. song seven<br>
-            08. song eight<br>
-            09. song nine<br>
-            10. song ten<br>
-            11. song eleven<br>
-            12. song twelve<br>
-            13. song thirteen<br>
-            14. song fourteen<br>
-            15. song fifteen
-        </div>
-
-        <p>
-            <small>we'll replace these with the actual playlist later.</small>
+        <p class="pfp-text">
+            i literally stared at this for 15 straight minutes.
+            <br>
+            <i>(you're that pretty)</i>
+            <br><br>
+            and about 10,000 more times.
         </p>
 
     </div>
 
     <div class="nav">
-        <button onclick="showSection(2)">← back</button>
-        <button onclick="showSection(4)">next →</button>
+
+        <button onclick="showSection(2)">
+            ← back
+        </button>
+
+        <button onclick="showSection(4)">
+            next →
+        </button>
+
     </div>
 
 </section>
 
 
-<!-- 04 -->
+<!-- ========================= -->
+<!-- PAGE 5 — 10,000 -->
+<!-- ========================= -->
 
 <section class="page section" id="section4">
 
-    <div class="number">04 — EVIDENCE</div>
+    <div class="number">05 — APPARENTLY, 10,000 WASN'T ENOUGH</div>
 
     <div class="card">
 
-        <h2>proof that this happened.</h2>
+        <img
+            src="pratham-photo.jpeg"
+            class="photo-image"
+            alt="Pratham"
+        >
 
-        <p>
-            Screenshots. Pictures. Random conversations.
-            Things that would mean absolutely nothing to anyone else.
+        <p class="big-line">
+            and then i got this pic.
         </p>
 
-        <div class="memory">
-            📸 screenshot goes here
-        </div>
-
-        <div class="memory">
-            📸 another tiny memory goes here
-        </div>
-
-        <div class="memory">
-            inside joke pending...
-        </div>
+        <p class="big-line">
+            yup.
+            <br>
+            10,000 doesn't even come close.
+        </p>
 
     </div>
 
     <div class="nav">
-        <button onclick="showSection(3)">← back</button>
-        <button onclick="showSection(5)">next →</button>
+
+        <button onclick="showSection(3)">
+            ← back
+        </button>
+
+        <button onclick="showSection(5)">
+            next →
+        </button>
+
     </div>
 
 </section>
 
 
-<!-- 05 -->
+<!-- ========================= -->
+<!-- PAGE 6 — FIRST CALL -->
+<!-- ========================= -->
 
-<section class="page section">
+<section class="page section" id="section5">
 
-    <div class="number">05 — THINGS I DIDN'T EXPECT</div>
+    <div class="number">06 — THE FIRST CALL</div>
 
     <div class="card">
 
-        <h2>this part is a little more serious.</h2>
+        <div class="call-date">
+            28.08.2026
+        </div>
 
-        <p>
-            I didn't expect one month to contain this many
-            conversations, laughs, little routines and memories.
-        </p>
+        <h2>the first time i heard you.</h2>
 
-        <p>
-            I didn't expect someone I met so randomly
-            to become such a familiar part of my days.
-        </p>
+        <div class="call-text">
 
-        <p>
-            And honestly, I didn't expect to be making
-            a website about it.
-        </p>
+            <p>
+                we spoke for the first time on call.
+            </p>
 
-        <p>but here we are.</p>
+            <p>
+                and holy shit,
+                i knew i was doomed.
+            </p>
+
+            <p>
+                you sound sooo sooo pretty.
+            </p>
+
+        </div>
 
     </div>
 
     <div class="nav">
-        <button onclick="showSection(4)">← back</button>
-        <button onclick="showSection(6)">next →</button>
+
+        <button onclick="showSection(4)">
+            ← back
+        </button>
+
+        <button onclick="showSection(6)">
+            next →
+        </button>
+
     </div>
 
 </section>
 
 
-<!-- 06 -->
+<!-- ========================= -->
+<!-- PAGE 7 — HINGE GOODBYE -->
+<!-- ========================= -->
 
 <section class="page section final" id="section6">
 
-    <div class="small">06 — THE HINGE GOODBYE</div>
+    <div class="small">
+        07 — THE HINGE GOODBYE
+    </div>
 
-    <h1>one month later…</h1>
+    <h1>
+        one month later…
+    </h1>
 
     <p>
-        I think we've found what we were looking for.
+        i think we found what we were looking for.
     </p>
 
-    <button onclick="showPopup()">delete Hinge with me?</button>
+    <button onclick="showPopup()">
+        delete Hinge with me?
+    </button>
 
     <div class="nav">
-        <button onclick="showSection(5)">← back</button>
+
+        <button onclick="showSection(5)">
+            ← back
+        </button>
+
     </div>
 
 </section>
 
 
+<!-- ========================= -->
 <!-- POPUP -->
+<!-- ========================= -->
 
 <div class="popup" id="popup">
 
     <div class="popup-box">
 
-        <h2>well...</h2>
+        <h2>
+            hehe you're mine now
+        </h2>
 
-        <p>
-            that seems like a pretty good reason
-            to delete an app.
-        </p>
-
-        <button onclick="closePopup()">okay :)</button>
+        <button onclick="closePopup()">
+            okay :)
+        </button>
 
     </div>
 
@@ -419,9 +570,14 @@
 <script>
 
 function openBook() {
+
     document.getElementById("opening").style.display = "none";
+
     document.getElementById("section1").style.display = "flex";
+
+    window.scrollTo(0, 0);
 }
+
 
 function showSection(number) {
 
@@ -430,7 +586,9 @@ function showSection(number) {
     let sections = document.querySelectorAll(".section");
 
     sections.forEach(function(section) {
+
         section.style.display = "none";
+
     });
 
     sections[number - 1].style.display = "flex";
@@ -438,12 +596,18 @@ function showSection(number) {
     window.scrollTo(0, 0);
 }
 
+
 function showPopup() {
+
     document.getElementById("popup").style.display = "flex";
+
 }
 
+
 function closePopup() {
+
     document.getElementById("popup").style.display = "none";
+
 }
 
 </script>
