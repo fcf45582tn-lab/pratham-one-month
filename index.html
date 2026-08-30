@@ -1,20 +1,452 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>one month ♡</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>one month ♡</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        background: #f7f3ed;
+        color: #29251f;
+        font-family: Georgia, serif;
+    }
+
+    .page {
+        min-height: 100vh;
+        padding: 70px 28px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .opening {
+        min-height: 100vh;
+    }
+
+    .small {
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        letter-spacing: 2px;
+        color: #81796e;
+        margin-bottom: 25px;
+    }
+
+    h1 {
+        font-size: 48px;
+        font-weight: normal;
+        margin: 0 0 18px;
+    }
+
+    h2 {
+        font-size: 32px;
+        font-weight: normal;
+        margin-bottom: 18px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.7;
+        max-width: 650px;
+    }
+
+    button {
+        margin-top: 28px;
+        padding: 13px 24px;
+        border: 1px solid #29251f;
+        background: transparent;
+        border-radius: 30px;
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #29251f;
+        color: white;
+    }
+
+    .section {
+        display: none;
+        min-height: 100vh;
+    }
+
+    .number {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        letter-spacing: 3px;
+        color: #9a8f82;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        background: #fffdf9;
+        padding: 35px;
+        max-width: 650px;
+        width: 100%;
+        border: 1px solid #ded7cd;
+        box-shadow: 0 10px 30px rgba(50,40,30,0.06);
+    }
+
+    .memory {
+        margin: 18px 0;
+        padding: 18px;
+        border-left: 2px solid #b8aa98;
+        text-align: left;
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .playlist {
+        text-align: left;
+        line-height: 2;
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+    }
+
+    .nav {
+        margin-top: 35px;
+    }
+
+    .nav button {
+        margin: 5px;
+    }
+
+    .final {
+        background: #29251f;
+        color: #f7f3ed;
+    }
+
+    .final .small {
+        color: #bdb4a8;
+    }
+
+    .final button {
+        border-color: #f7f3ed;
+        color: #f7f3ed;
+    }
+
+    .final button:hover {
+        background: #f7f3ed;
+        color: #29251f;
+    }
+
+    .popup {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.55);
+        align-items: center;
+        justify-content: center;
+        padding: 25px;
+    }
+
+    .popup-box {
+        background: #fffdf9;
+        color: #29251f;
+        padding: 40px 30px;
+        max-width: 420px;
+        width: 100%;
+        text-align: center;
+    }
+</style>
 </head>
 
 <body>
 
-  <h1>hi pratham :)</h1>
+<!-- OPENING -->
 
-  <p>02.09.2026</p>
+<section class="page opening" id="opening">
 
-  <h2>one month.</h2>
+    <div class="small">02.09.2026</div>
 
-  <button>open →</button>
+    <h1>hi pratham :)</h1>
+
+    <p>one month.</p>
+
+    <button onclick="openBook()">open →</button>
+
+</section>
+
+
+<!-- 01 -->
+
+<section class="page section" id="section1">
+
+    <div class="number">01 — HOW IT STARTED</div>
+
+    <div class="card">
+
+        <h2>so... the Hinge story.</h2>
+
+        <p>
+            Two people. One dating app. 
+            Questionable decisions.
+            And somehow, here we are.
+        </p>
+
+        <div class="memory">
+            it was supposed to be just another conversation.
+        </div>
+
+        <div class="memory">
+            and then it very much wasn't.
+        </div>
+
+        <div class="memory">
+            somewhere along the way, talking to you became
+            one of my favourite parts of the day.
+        </div>
+
+    </div>
+
+    <div class="nav">
+        <button onclick="showSection(2)">next →</button>
+    </div>
+
+</section>
+
+
+<!-- 02 -->
+
+<section class="page section" id="section2">
+
+    <div class="number">02 — ONE MONTH OF YOU</div>
+
+    <div class="card">
+
+        <h2>little things.</h2>
+
+        <p>
+            The tiny things I noticed without really meaning to.
+        </p>
+
+        <div class="memory">
+            the way you...
+        </div>
+
+        <div class="memory">
+            the random things you say that somehow stay in my head.
+        </div>
+
+        <div class="memory">
+            the conversations that accidentally become hours.
+        </div>
+
+        <div class="memory">
+            basically: you have become very easy to notice.
+        </div>
+
+    </div>
+
+    <div class="nav">
+        <button onclick="showSection(1)">← back</button>
+        <button onclick="showSection(3)">next →</button>
+    </div>
+
+</section>
+
+
+<!-- 03 -->
+
+<section class="page section" id="section3">
+
+    <div class="number">03 — THE SOUNDTRACK 🎧</div>
+
+    <div class="card">
+
+        <h2>15 songs.</h2>
+
+        <p>
+            A tiny soundtrack for the first month.
+        </p>
+
+        <div class="playlist">
+            01. song one<br>
+            02. song two<br>
+            03. song three<br>
+            04. song four<br>
+            05. song five<br>
+            06. song six<br>
+            07. song seven<br>
+            08. song eight<br>
+            09. song nine<br>
+            10. song ten<br>
+            11. song eleven<br>
+            12. song twelve<br>
+            13. song thirteen<br>
+            14. song fourteen<br>
+            15. song fifteen
+        </div>
+
+        <p>
+            <small>we'll replace these with the actual playlist later.</small>
+        </p>
+
+    </div>
+
+    <div class="nav">
+        <button onclick="showSection(2)">← back</button>
+        <button onclick="showSection(4)">next →</button>
+    </div>
+
+</section>
+
+
+<!-- 04 -->
+
+<section class="page section" id="section4">
+
+    <div class="number">04 — EVIDENCE</div>
+
+    <div class="card">
+
+        <h2>proof that this happened.</h2>
+
+        <p>
+            Screenshots. Pictures. Random conversations.
+            Things that would mean absolutely nothing to anyone else.
+        </p>
+
+        <div class="memory">
+            📸 screenshot goes here
+        </div>
+
+        <div class="memory">
+            📸 another tiny memory goes here
+        </div>
+
+        <div class="memory">
+            inside joke pending...
+        </div>
+
+    </div>
+
+    <div class="nav">
+        <button onclick="showSection(3)">← back</button>
+        <button onclick="showSection(5)">next →</button>
+    </div>
+
+</section>
+
+
+<!-- 05 -->
+
+<section class="page section">
+
+    <div class="number">05 — THINGS I DIDN'T EXPECT</div>
+
+    <div class="card">
+
+        <h2>this part is a little more serious.</h2>
+
+        <p>
+            I didn't expect one month to contain this many
+            conversations, laughs, little routines and memories.
+        </p>
+
+        <p>
+            I didn't expect someone I met so randomly
+            to become such a familiar part of my days.
+        </p>
+
+        <p>
+            And honestly, I didn't expect to be making
+            a website about it.
+        </p>
+
+        <p>but here we are.</p>
+
+    </div>
+
+    <div class="nav">
+        <button onclick="showSection(4)">← back</button>
+        <button onclick="showSection(6)">next →</button>
+    </div>
+
+</section>
+
+
+<!-- 06 -->
+
+<section class="page section final" id="section6">
+
+    <div class="small">06 — THE HINGE GOODBYE</div>
+
+    <h1>one month later…</h1>
+
+    <p>
+        I think we've found what we were looking for.
+    </p>
+
+    <button onclick="showPopup()">delete Hinge with me?</button>
+
+    <div class="nav">
+        <button onclick="showSection(5)">← back</button>
+    </div>
+
+</section>
+
+
+<!-- POPUP -->
+
+<div class="popup" id="popup">
+
+    <div class="popup-box">
+
+        <h2>well...</h2>
+
+        <p>
+            that seems like a pretty good reason
+            to delete an app.
+        </p>
+
+        <button onclick="closePopup()">okay :)</button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function openBook() {
+    document.getElementById("opening").style.display = "none";
+    document.getElementById("section1").style.display = "flex";
+}
+
+function showSection(number) {
+
+    document.getElementById("opening").style.display = "none";
+
+    let sections = document.querySelectorAll(".section");
+
+    sections.forEach(function(section) {
+        section.style.display = "none";
+    });
+
+    sections[number - 1].style.display = "flex";
+
+    window.scrollTo(0, 0);
+}
+
+function showPopup() {
+    document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
+
+</script>
 
 </body>
 </html>
